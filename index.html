@@ -1,112 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baipai | Official Website</title>
-  <style>
-    body {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baipai | Official Website</title>
+<style>
+/* ---- BODY ---- */
+body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
 }
 
+/* ---- HEADER ---- */
 header {
   text-align: center;
-  padding: 45px 20px;
-  color: white;
+  padding: 60px 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
 header h1 {
-  font-size: 38px;
+  font-size: 48px;
   letter-spacing: 2px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
-  font-size: 16px;
-  opacity: 0.9;
+  font-size: 18px;
+  margin-top: 8px;
+  opacity: 0.85;
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid white;
-  margin-top: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
 }
 
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+/* ---- SECTION ---- */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ---- CARDS ---- */
 .card {
-  background: white;
-  padding: 25px;
-  margin: 25px auto;
-  border-radius: 18px;
-  max-width: 600px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 25px;
+  max-width: 650px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h2 {
-  color: #203a43;
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
+/* Card delays */
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+
+/* ---- BUTTON ---- */
+.insta-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 35px;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+  color: white;
+  text-decoration: none;
+  border-radius: 35px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta-btn:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ---- FOOTER ---- */
 footer {
   background: #111;
   color: #ccc;
   text-align: center;
-  padding: 18px;
-  margin-top: 30px;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
 }
-  </style>
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Baipai</h1>
-    <p>Student | Learner | Future Entrepreneur</p>
+<header>
+  <h1>Baipai</h1>
+  <p>Student | Learner | Future Entrepreneur</p>
   <img class="profile-photo" src="IMG_20251208_130023_339.webp" alt="My Photo">
-  </header>
+</header>
 
+<section>
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m <strong>Krushna Sing Baipai</strong>.<br>
+      I am a motivated student and a lifelong learner with a strong interest in English, technology, and business planning.<br>
+      My goal is to continuously grow my skills and become a <strong>successful entrepreneur</strong> in the future.
+    </p>
+  </div>
 
-  <section>
-    <div class="card">
-      <h2>About Me</h2>
-<p>
-Hi, I’m <strong>Krushna Sing Baipai</strong>.<br>
-I am a motivated student and a lifelong learner with a strong interest in
-English, technology, and business planning.<br>
-My goal is to continuously grow my skills and become a
-<strong>successful entrepreneur</strong> in the future.
-</p>
-    </div>
+  <div class="card">
+    <h2>What I Do</h2>
+    <ul>
+      <li>Study & Exam Preparation</li>
+      <li>Learning English & Technology</li>
+      <li>Future Business Planning</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h2>What I Do</h2>
-      <ul>
-        <li>Study & Exam Preparation</li>
-        <li>Learning English & Technology</li>
-        <li>Future Business Planning</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:baipaikrishnabaipai@gmail.com">baipaikrishnabaipai@gmail.com</a></p>
+    <a href="https://instagram.com/b_a_i_p_a_i_" target="_blank" class="insta-btn">📸 Follow me on Instagram</a>
+  </div>
+</section>
 
-    <div class="card">
-  <h2>Contact</h2>
-
-  <p>
-    Email:
-    <a href="mailto:baipaikrishnabaipai@gmail.com">
-      baipaikrishnabaipai@gmail.com
-    </a>
-  </p>
-
-  <a href="https://instagram.com/b_a_i_p_a_i_" target="_blank" class="insta-btn">
-    📸 Follow me on Instagram
-  </a>
-      </div>
-
-  <footer>
-    © 2026 Baipai. All Rights Reserved.
-  </footer>
+<footer>
+  © 2026 Baipai. All Rights Reserved.
+</footer>
 
 </body>
 </html>
