@@ -132,18 +132,19 @@ footer {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  }
   .insta-btn {
-  display: inline-block;
-  margin-top: 15px;
-  text-decoration: none;
-  transition: none;
-}
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+
+    transition: none;
+    transform: translateY(0);
+    animation: none;
+  }
 
 .insta-btn:active {
-  transform: none;
+    transform: translateY(0);
 }
-
 .insta-btn:focus {
   outline: none;
   }
@@ -151,7 +152,13 @@ footer {
 .insta-btn * {
   -webkit-tap-highlight-color: transparent;
   }
+  .insta-btn{
+    animation: none !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
 </style>
+  
 </head>
 <body>
 
